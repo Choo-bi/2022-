@@ -36,10 +36,11 @@ import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
 import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import kidData from "./data/reportsData";
+import { useState } from "react";
 
 function Dashboard() {
   const { size } = typography;
-  const {kidName} = kidData.name;
+  const {kidname} = kidData.name;
   
 
   return (
@@ -86,7 +87,7 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} sm={12} xl={4}>
               <MiniStatisticsCard
-                title={{ name: "sdf", text: "의 집중 시간" }}
+                title={{ name: {kidname}, text: "의 집중 시간" }}
                 count={"20 m" + " 20 s"}
                 // percentage={{ color: "success", text: "+55%" }}
                 icon={{ color: "info", component: "edit" }}
